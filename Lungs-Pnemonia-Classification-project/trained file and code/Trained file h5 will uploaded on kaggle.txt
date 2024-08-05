@@ -1,0 +1,1 @@
+You can download the trained h5 file of the model from kaggle website:
