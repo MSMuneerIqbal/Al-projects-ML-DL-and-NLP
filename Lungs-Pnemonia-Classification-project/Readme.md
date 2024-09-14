@@ -42,7 +42,7 @@ The model was trained using the Adam optimizer and binary cross-entropy loss.
 ## Setup and Installation
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/pneumonia-detector.git
+    git clone https://github.com/MSMuneerIqbal/Ai-projects-ML-DL-NLP-GenAI/tree/main/Lungs-Pnemonia-Classification-project
     ```
 2. Navigate to the project directory:
     ```bash
