@@ -38,8 +38,54 @@ def predict(image):
 
 # Streamlit app
 def main():
-    st.title("Lungs Pneumonia Classification")
-    st.write("Upload an X-ray image and the model will predict whether pneumonia is detected or not.")
+    st.markdown("""
+        <style>
+        .title {
+            text-align: center;
+            font-weight: bold;
+            color: #FF0000; /* Red color for the title */
+            font-size: 40px;
+        }
+        .description {
+            text-align: center;
+            font-size: 22px; /* Font size for description */
+            color: #000000; /* Gray color for description */
+        }
+        .stButton button {
+            background-color: #FF0000; /* Red background for the button */
+            color: white; /* White text for the button */
+            font-weight: bold; /* Bold text */
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .stButton button:hover {
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #FFC0CB; /* Darker red when hovered */
+
+    
+        }
+        .output-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: #FF0000; /* Red color for output text */
+            text-align: center;
+        }
+        .confidence-text {
+            font-weight: bold;
+            font-size: 26px;
+            color: #FF0000; /* Red color for confidence text */
+            text-align: center;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<p class="title">AI-Based Pneumonia Detection System</p>', unsafe_allow_html=True)
+    st.markdown('<p class="description">Upload an X-ray image and the model will predict whether pneumonia is detected or not.</p>', unsafe_allow_html=True)
 
     # Upload image file
     uploaded_file = st.file_uploader("Choose an X-ray image", type=["jpg", "jpeg", "png"])
@@ -55,8 +101,8 @@ def main():
             # Predict the class label and confidence score
             predicted_class, confidence = predict(image)
             # Display the predicted class label and confidence score
-            st.write(f"Prediction: {predicted_class}")
-            st.write(f"Confidence: {confidence}")
+            st.markdown(f"<p class='output-text'>Result: {predicted_class}</p>", unsafe_allow_html=True)
+            st.markdown(f"<p class='confidence-text'>Confidence: {confidence:.2f}</p>", unsafe_allow_html=True)
 
 # Run the Streamlit app
 if __name__ == '__main__':
