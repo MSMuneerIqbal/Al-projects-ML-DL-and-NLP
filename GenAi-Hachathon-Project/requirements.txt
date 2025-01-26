@@ -1,8 +1,0 @@
-gradio
-groq
-numpy
-openai-whisper
-gtts
-librosa
-nltk
-deep-translator bold text
