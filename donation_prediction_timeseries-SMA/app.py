@@ -3,11 +3,8 @@ import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 
-# Load the dataset from the CSV file
-@st.cache_data  # Cache the data for better performance
-def load_data():
-    return pd.read_csv('donations_data.csv')
-
+# Load your dataset
+df = pd.read_csv('./donations_data.csv')
 # Load data
 df = load_data()
 # Set the index to 'Members Name' for easier access
