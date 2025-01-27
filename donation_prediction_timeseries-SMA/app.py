@@ -4,7 +4,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Load your dataset
-df = pd.read_csv('./donations_data.csv')
+df = pd.read_csv('donations_data.csv')
 
 # Set the index to 'Members Name' for easier access
 df.set_index('Members Name', inplace=True)
